@@ -201,7 +201,7 @@ class StreamingStep(Step):
 
 class ScriptRunnerStep(JarStep):
 
-    ScriptRunnerJar = 's3n://us-east-1.elasticmapreduce/libs/script-runner/script-runner.jar'
+    ScriptRunnerJar = 's3n://eu-west-1.elasticmapreduce/libs/script-runner/script-runner.jar'
 
     def __init__(self, name, **kw):
         JarStep.__init__(self, name, self.ScriptRunnerJar, **kw)
@@ -209,8 +209,8 @@ class ScriptRunnerStep(JarStep):
 
 class PigBase(ScriptRunnerStep):
 
-    BaseArgs = ['s3n://us-east-1.elasticmapreduce/libs/pig/pig-script',
-                '--base-path', 's3n://us-east-1.elasticmapreduce/libs/pig/']
+    BaseArgs = ['s3n://eu-west-1.elasticmapreduce/libs/pig/pig-script',
+                '--base-path', 's3n://eu-west-1.elasticmapreduce/libs/pig/']
 
 
 class InstallPigStep(PigBase):
