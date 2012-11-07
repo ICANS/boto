@@ -244,8 +244,8 @@ class PigStep(PigBase):
 
 class HiveBase(ScriptRunnerStep):
 
-    BaseArgs = ['s3n://us-east-1.elasticmapreduce/libs/hive/hive-script',
-                '--base-path', 's3n://us-east-1.elasticmapreduce/libs/hive/']
+    BaseArgs = ['s3n://eu-west-1.elasticmapreduce/libs/hive/hive-script',
+                '--base-path', 's3n://eu-west-1.elasticmapreduce/libs/hive/']
 
 
 class InstallHiveStep(HiveBase):
